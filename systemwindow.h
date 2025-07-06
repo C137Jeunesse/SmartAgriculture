@@ -124,21 +124,35 @@ private slots:
     void onEndTimeChanged(const QDateTime &dateTime);
 
 private:
-    void initStyleSheet(); ///< 初始化样式表
-    void initMenu(); ///< 初始化菜单栏
-    bool initDatabase(); ///< 初始化数据库
-    void initUI(); ///< 初始化UI布局
-    void initChart(); ///< 初始化图表
-    void setupConnections(); ///< 连接信号槽
-    void populateCropAreaCombo(); ///< 填充作物区下拉框
-    void loadAndDisplayData(); ///< 加载并显示数据（无参，默认用控件值）
-    void loadAndDisplayData(const QDateTime &start, const QDateTime &end); ///< 加载并显示数据（指定时间区间）
-    QString getCurrentEnvironmentData(); ///< 获取当前环境数据字符串
-    void updatePieChart(int cropAreaId, const QDateTime &startTime, const QDateTime &endTime); ///< 更新饼图
-    void initFertilizerPredictionSystem(); ///< 初始化肥料预测系统
-    QString translateCropType(const QString& chineseCropType); ///< 作物类型中英文转换
+    void initStyleSheet(); 
+///< 初始化样式表
+    void initMenu(); 
+///< 初始化菜单栏
+    bool initDatabase(); 
+///< 初始化数据库
+    void initUI(); 
+///< 初始化UI布局
+    void initChart(); 
+///< 初始化图表
+    void setupConnections(); 
+///< 连接信号槽
+    void populateCropAreaCombo(); 
+///< 填充作物区下拉框
+    void loadAndDisplayData(); 
+///< 加载并显示数据（无参，默认用控件值）
+    void loadAndDisplayData(const QDateTime &start, const QDateTime &end); 
+///< 加载并显示数据（指定时间区间）
+    QString getCurrentEnvironmentData(); 
+///< 获取当前环境数据字符串
+    void updatePieChart(int cropAreaId, const QDateTime &startTime, const QDateTime &endTime); 
+///< 更新饼图
+    void initFertilizerPredictionSystem(); 
+///< 初始化肥料预测系统
+    QString translateCropType(const QString& chineseCropType);
+///< 作物类型中英文转换
 
-    std::vector<int> m_userCropIds; ///< 当前用户可访问的作物区ID列表
+    std::vector<int> m_userCropIds; 
+///< 当前用户可访问的作物区ID列表
 
     // --- UI 组件 ---
     QAction *m_retrainAction, *m_exportCsvAction, *m_exportImageAction, *m_aboutAction;
@@ -205,8 +219,10 @@ signals:
      */
     void refreshRequested(SystemSuggestionDialog* dialog);
 private:
-    QTextEdit *m_contentTextEdit; ///< 建议内容显示控件
-    void setupUI(); ///< 初始化UI
+    QTextEdit *m_contentTextEdit; 
+///< 建议内容显示控件
+    void setupUI(); 
+///< 初始化UI
 };
 
 #endif // SYSTEMWINDOW_H
