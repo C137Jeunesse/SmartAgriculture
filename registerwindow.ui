@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RegisterWindow</class>
+ <widget class="QMainWindow" name="RegisterWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>智慧农业注册</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="registerFrame">
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>500</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>520</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding"/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+        QFrame#registerFrame {
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 24px rgba(60,60,60,0.08);
+        }
+       </string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="registerLayout">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <property name="leftMargin">
+        <number>24</number>
+       </property>
+       <property name="rightMargin">
+        <number>24</number>
+       </property>
+       <property name="topMargin">
+        <number>24</number>
+       </property>
+       <property name="bottomMargin">
+        <number>24</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="titleCloseLayout">
+         <item>
+          <widget class="QLabel" name="labelTitle">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+             font-family: '微软雅黑', 'Microsoft YaHei', sans-serif;
+             font-size: 32px;
+             font-weight: bold;
+             color: #1976d2;
+             margin-bottom: 18px;
+            </string>
+           </property>
+           <property name="text">
+            <string>用户注册</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonClose">
+           <property name="minimumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+             QPushButton {
+                 background: transparent;
+                 color: #888;
+                 font-size: 20px;
+                 border: none;
+                 border-radius: 12px;
+             }
+             QPushButton:hover {
+                 background: #f44336;
+                 color: #fff;
+             }
+            </string>
+           </property>
+           <property name="text">
+            <string>×</string>
+           </property>
+           <property name="toolTip">
+            <string>关闭</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelName">
+         <property name="styleSheet">
+          <string notr="true">font-family: '微软雅黑', 'Microsoft YaHei', sans-serif; font-size: 15px; color: #555;</string>
+         </property>
+         <property name="text">
+          <string>姓名</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditName">
+         <property name="styleSheet">
+          <string notr="true">
+           font-family: '微软雅黑', 'Microsoft YaHei', sans-serif;
+           border: 1px solid #bdbdbd;
+           border-radius: 8px;
+           padding-left: 10px;
+           font-size: 16px;
+           min-height: 38px;
+          </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelPhone">
+         <property name="styleSheet">
+          <string notr="true">font-family: '微软雅黑', 'Microsoft YaHei', sans-serif; font-size: 15px; color: #555;</string>
+         </property>
+         <property name="text">
+          <string>手机号</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditPhone">
+         <property name="styleSheet">
+          <string notr="true">
+           font-family: '微软雅黑', 'Microsoft YaHei', sans-serif;
+           border: 1px solid #bdbdbd;
+           border-radius: 8px;
+           padding-left: 10px;
+           font-size: 16px;
+           min-height: 38px;
+          </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelPhoneTip">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelPassword">
+         <property name="styleSheet">
+          <string notr="true">font-family: '微软雅黑', 'Microsoft YaHei', sans-serif; font-size: 15px; color: #555;</string>
+         </property>
+         <property name="text">
+          <string>密码</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditPassword">
+         <property name="styleSheet">
+          <string notr="true">
+           font-family: '微软雅黑', 'Microsoft YaHei', sans-serif;
+           border: 1px solid #bdbdbd;
+           border-radius: 8px;
+           padding-left: 10px;
+           font-size: 16px;
+           min-height: 38px;
+          </string>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelRole">
+         <property name="styleSheet">
+          <string/>
+         </property>
+         <property name="text">
+          <string>角色</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBoxRole">
+         <property name="styleSheet">
+          <string notr="true">
+           font-family: '微软雅黑', 'Microsoft YaHei', sans-serif;
+           border: 1px solid #bdbdbd;
+           border-radius: 8px;
+           font-size: 16px;
+           padding-left: 10px;
+          </string>
+         </property>
+         <item>
+          <property name="text">
+           <string>农户</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>专家</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelCropType">
+         <property name="visible">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>作物类型</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBoxCropType">
+         <property name="visible">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+            font-family: '微软雅黑', 'Microsoft YaHei', sans-serif;
+            border: 1px solid #bdbdbd;
+            border-radius: 8px;
+            font-size: 16px;
+            padding-left: 10px;
+          </string>
+         </property>
+         <item><property name="text"><string>甘蔗</string></property></item>
+         <item><property name="text"><string>小米/谷子</string></property></item>
+         <item><property name="text"><string>大麦</string></property></item>
+         <item><property name="text"><string>水稻</string></property></item>
+         <item><property name="text"><string>豆类</string></property></item>
+         <item><property name="text"><string>烟草</string></property></item>
+         <item><property name="text"><string>花生</string></property></item>
+         <item><property name="text"><string>玉米</string></property></item>
+         <item><property name="text"><string>棉花</string></property></item>
+         <item><property name="text"><string>小麦</string></property></item>
+         <item><property name="text"><string>油籽作物</string></property></item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelArea">
+         <property name="visible">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>面积（亩）</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditArea">
+         <property name="visible">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelAreaTip">
+        <property name="visible">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelLocation">
+         <property name="visible">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>地点</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditLocation">
+         <property name="visible">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelDetail">
+         <property name="visible">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>详情</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditDetail">
+         <property name="visible">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelField">
+         <property name="visible">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>擅长领域</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditField">
+         <property name="visible">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonRegister">
+         <property name="minimumWidth">
+          <number>120</number>
+         </property>
+         <property name="maximumWidth">
+          <number>220</number>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed"/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+           font-family: '微软雅黑', 'Microsoft YaHei', sans-serif;
+           background-color: #1976d2;
+           color: #fff;
+           border-radius: 8px;
+           font-size: 18px;
+           font-weight: bold;
+           min-height: 38px;
+           margin-top: 12px;
+           padding-left: 24px;
+           padding-right: 24px;
+          </string>
+         </property>
+         <property name="text">
+          <string>注册</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
