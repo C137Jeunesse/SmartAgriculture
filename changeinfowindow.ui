@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChangeInfoWindow</class>
+ <widget class="QMainWindow" name="ChangeInfoWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>个人信息管理</string>
+  </property>
+  <property name="styleSheet">
+   <string>background-color: #f5f7fa;</string>
+  </property>
+  
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <property name="spacing">
+     <number>15</number>
+    </property>
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="topMargin">
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>20</number>
+    </property>
+    
+    <!-- 标题栏 -->
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="text">
+       <string>个人信息管理</string>
+      </property>
+      <property name="styleSheet">
+       <string><![CDATA[
+         font-size: 24px;
+         font-weight: bold;
+         color: #2c3e50;
+         padding: 10px 0;
+       ]]></string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    
+    <!-- 基本信息卡片 -->
+    <item>
+     <widget class="QGroupBox" name="basicInfoGroup">
+      <property name="title">
+       <string>基本信息</string>
+      </property>
+      <property name="styleSheet">
+       <string><![CDATA[
+         QGroupBox {
+           background-color: white;
+           border-radius: 12px;
+           padding: 20px;
+           border: 1px solid #e0e6ed;
+           margin-top: 10px;
+         }
+         QGroupBox::title {
+           subcontrol-origin: margin;
+           left: 10px;
+           padding: 0 5px;
+           font-weight: bold;
+           font-size: 16px;
+           color: #3498db;
+         }
+       ]]></string>
+      </property>
+      <layout class="QFormLayout" name="basicInfoLayout">
+       <property name="verticalSpacing">
+        <number>15</number>
+       </property>
+       <property name="horizontalSpacing">
+        <number>20</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="nameLabel">
+         <property name="text">
+          <string>姓名：</string>
+         </property>
+         <property name="styleSheet">
+          <string>font-weight: bold; color: #2c3e50;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="nameEdit">
+         <property name="styleSheet">
+          <string><![CDATA[
+            border: 1px solid #e0e6ed;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 14px;
+          ]]></string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="phoneLabel">
+         <property name="text">
+          <string>电话：</string>
+         </property>
+         <property name="styleSheet">
+          <string>font-weight: bold; color: #2c3e50;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="phoneEdit">
+         <property name="styleSheet">
+          <string><![CDATA[
+            border: 1px solid #e0e6ed;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 14px;
+          ]]></string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="passwordLabel">
+         <property name="text">
+          <string>密码：</string>
+         </property>
+         <property name="styleSheet">
+          <string>font-weight: bold; color: #2c3e50;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="passwordEdit">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="styleSheet">
+          <string><![CDATA[
+            border: 1px solid #e0e6ed;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 14px;
+          ]]></string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="confirmPasswordLabel">
+         <property name="text">
+          <string>确认密码：</string>
+         </property>
+         <property name="styleSheet">
+          <string>font-weight: bold; color: #2c3e50;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="confirmPasswordEdit">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="styleSheet">
+          <string><![CDATA[
+            border: 1px solid #e0e6ed;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 14px;
+          ]]></string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    
+    <!-- 角色特定信息 -->
+    <item>
+     <widget class="QStackedWidget" name="roleSpecificStack">
+      <property name="styleSheet">
+       <string><![CDATA[
+         QGroupBox {
+           background-color: white;
+           border-radius: 12px;
+           padding: 20px;
+           border: 1px solid #e0e6ed;
+         }
+         QGroupBox::title {
+           subcontrol-origin: margin;
+           left: 10px;
+           padding: 0 5px;
+           font-weight: bold;
+           font-size: 16px;
+           color: #3498db;
+         }
+       ]]></string>
+      </property>
+      
+      <!-- 农户页面 -->
+      <widget class="QWidget" name="farmerPage">
+       <layout class="QVBoxLayout" name="farmerLayout">
+        <property name="spacing">
+         <number>15</number>
+        </property>
+        
+        <!-- 作物区标题 -->
+        <item>
+         <widget class="QLabel" name="cropAreaTitle">
+          <property name="text">
+           <string>我的作物区</string>
+          </property>
+          <property name="styleSheet">
+           <string><![CDATA[
+             font-size: 20px;
+             font-weight: bold;
+             color: #2c3e50;
+             padding-bottom: 12px;
+             border-bottom: 2px solid #e0e6ed;
+           ]]></string>
+          </property>
+         </widget>
+        </item>
+        
+        <!-- 作物区列表 -->
+        <item>
+         <widget class="QScrollArea" name="cropAreaScroll">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string><![CDATA[
+             background: transparent;
+             border: none;
+           ]]></string>
+          </property>
+          <widget class="QWidget" name="cropAreaList">
+           <layout class="QVBoxLayout" name="cropAreaLayout">
+            <property name="spacing">
+             <number>16</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            
+            <!-- 卡片示例 -->
+            <item>
+             <widget class="QWidget">
+              <property name="styleSheet">
+               <string><![CDATA[
+                 background: #fff;
+                 border-radius: 12px;
+                 border: 1.5px solid #e0e6ed;
+                 margin-bottom: 10px;
+                 padding: 18px 14px 14px 18px;
+               ]]></string>
+              </property>
+              <layout class="QVBoxLayout">
+               <item>
+                <layout class="QHBoxLayout">
+                 <item>
+                  <widget class="QLabel">
+                   <property name="text">
+                    <string>小麦 | 50亩 | 荆州市豹子岭村</string>
+                   </property>
+                   <property name="styleSheet">
+                    <string>font-size: 16px; color: #2c3e50;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton">
+                   <property name="text">
+                    <string>编辑</string>
+                   </property>
+                   <property name="styleSheet">
+                    <string><![CDATA[
+                      QPushButton {
+                        background: #f0fff4;
+                        color: #27ae60;
+                        border: 1.5px solid #27ae60;
+                        border-radius: 6px;
+                        padding: 8px 22px;
+                        font-size: 15px;
+                        font-weight: bold;
+                      }
+                      QPushButton:hover {
+                        background: #e0f7e0;
+                      }
+                    ]]></string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton">
+                   <property name="text">
+                    <string>删除</string>
+                   </property>
+                   <property name="styleSheet">
+                    <string><![CDATA[
+                      QPushButton {
+                        background: #fff0f0;
+                        color: #e74c3c;
+                        border: 1.5px solid #e74c3c;
+                        border-radius: 6px;
+                        padding: 8px 22px;
+                        font-size: 15px;
+                        font-weight: bold;
+                      }
+                      QPushButton:hover {
+                        background: #ffe0e0;
+                      }
+                    ]]></string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QLabel">
+                 <property name="text">
+                  <string>说明：本地优质小麦，适合春季种植。</string>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 14px; color: #888; background: #f8f9fa; border-radius: 5px; padding: 8px 12px; margin-top: 6px;</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            
+            <!-- 空状态提示 -->
+            <item>
+             <widget class="QLabel" name="noCropLabel">
+              <property name="text">
+               <string>暂无作物区信息</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="styleSheet">
+               <string>color: #b0b0b0; font-size: 18px; padding: 50px 0; background: #f8f9fa; border-radius: 10px; font-weight: bold;</string>
+              </property>
+              <property name="visible">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        
+        <!-- 添加作物区按钮 -->
+        <item>
+         <widget class="QPushButton" name="addCropButton">
+          <property name="text">
+           <string>添加作物区</string>
+          </property>
+          <property name="styleSheet">
+           <string><![CDATA[
+             QPushButton {
+               background: #27ae60;
+               color: white;
+               border-radius: 8px;
+               padding: 14px 0;
+               font-size: 18px;
+               font-weight: bold;
+               margin-top: 10px;
+             }
+             QPushButton:hover {
+               background: #219653;
+             }
+           ]]></string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      
+      <!-- 专家页面 -->
+      <widget class="QWidget" name="expertPage">
+       <layout class="QVBoxLayout" name="expertLayout">
+        <property name="spacing">
+         <number>15</number>
+        </property>
+        
+        <!-- 擅长领域 -->
+        <item>
+         <widget class="QGroupBox" name="expertiseGroup">
+          <property name="title">
+           <string>擅长领域</string>
+          </property>
+          <property name="styleSheet">
+           <string><![CDATA[
+             background-color: white;
+             border-radius: 12px;
+             padding: 20px;
+             border: 1px solid #e0e6ed;
+           ]]></string>
+          </property>
+          <layout class="QHBoxLayout" name="expertiseLayout">
+           <item>
+            <widget class="QLineEdit" name="expertiseEdit">
+             <property name="placeholderText">
+              <string>请输入您的专业领域，如：病虫害防治、灌溉技术等</string>
+             </property>
+             <property name="styleSheet">
+              <string><![CDATA[
+                border: 1px solid #e0e6ed;
+                border-radius: 6px;
+                padding: 8px 12px;
+                font-size: 14px;
+              ]]></string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        
+        <!-- 添加作物区按钮（隐藏） -->
+        <item>
+         <widget class="QPushButton" name="addCropButtonExpert">
+          <property name="visible">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>添加作物区</string>
+          </property>
+          <property name="styleSheet">
+           <string><![CDATA[
+             QPushButton {
+               background-color: #27ae60;
+               color: white;
+               border-radius: 6px;
+               padding: 10px 20px;
+               font-size: 14px;
+               font-weight: bold;
+               border: none;
+             }
+             QPushButton:hover {
+               background-color: #219653;
+             }
+           ]]></string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    
+    <!-- 按钮区域 -->
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <property name="spacing">
+       <number>20</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="saveButton">
+        <property name="text">
+         <string>保存更改</string>
+        </property>
+        <property name="styleSheet">
+         <string><![CDATA[
+           QPushButton {
+             background-color: #3498db;
+             color: white;
+             border-radius: 6px;
+             padding: 12px 30px;
+             font-size: 16px;
+             font-weight: bold;
+             border: none;
+           }
+           QPushButton:hover {
+             background-color: #2980b9;
+           }
+         ]]></string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cancelButton">
+        <property name="text">
+         <string>取消</string>
+        </property>
+        <property name="styleSheet">
+         <string><![CDATA[
+           QPushButton {
+             background-color: #e0e6ed;
+             color: #2c3e50;
+             border-radius: 6px;
+             padding: 12px 30px;
+             font-size: 16px;
+             font-weight: bold;
+             border: none;
+           }
+           QPushButton:hover {
+             background-color: #d0d6e0;
+           }
+         ]]></string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="logoutButton">
+        <property name="text">
+         <string>退出登录</string>
+        </property>
+        <property name="styleSheet">
+         <string><![CDATA[
+           QPushButton {
+             background-color: #e74c3c;
+             color: white;
+             border-radius: 6px;
+             padding: 12px 30px;
+             font-size: 16px;
+             font-weight: bold;
+             border: none;
+           }
+           QPushButton:hover {
+             background-color: #c0392b;
+           }
+         ]]></string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    
+   </layout>
+  </widget>
+  
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

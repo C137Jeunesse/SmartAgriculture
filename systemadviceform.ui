@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SystemAdviceForm</class>
+ <widget class="QWidget" name="SystemAdviceForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>系统建议</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="">
+   <item>
+    <widget class="QLabel" name="labelTitle">
+     <property name="text">
+      <string>请输入您的建议：</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 18px; font-weight: bold; margin-bottom: 10px;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="adviceTextEdit">
+     <property name="placeholderText">
+      <string>在此输入您的宝贵建议...</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 15px; border-radius: 8px; padding: 8px; background: #f8f8f8; border: 1px solid #d0d0d0;</string>
+     </property>
+     <property name="minimumHeight">
+      <number>100</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="submitButton">
+     <property name="text">
+      <string>提交</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 16px; padding: 8px 32px; border-radius: 16px; background: #4CAF50; color: white; font-weight: bold; margin-top: 15px;</string>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

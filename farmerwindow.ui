@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FarmerWindow</class>
+ <widget class="QMainWindow" name="FarmerWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>农户管理平台</string>
+  </property>
+  <property name="styleSheet">
+   <string>background-color: #f5f7fa;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <item>
+     <layout class="QHBoxLayout" name="navLayout">
+      <property name="spacing">
+       <number>20</number>
+      </property>
+      <property name="leftMargin">
+       <number>20</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>20</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="titleLabel">
+        <property name="styleSheet">
+         <string>
+            font-size: 22px;
+            font-weight: bold;
+            color: #2c3e50;
+          </string>
+        </property>
+        <property name="text">
+         <string>农户管理平台</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="subtitleLabel">
+        <property name="styleSheet">
+         <string>font-size: 13px; color: #888; margin-bottom: 2px;</string>
+        </property>
+        <property name="text">
+         <string>姓名，你好！</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="updateInfoButton">
+        <property name="styleSheet">
+         <string>
+            QPushButton {
+              background-color: #3498db;
+              color: white;
+              border-radius: 6px;
+              padding: 10px 20px;
+              font-size: 14px;
+              font-weight: bold;
+              border: none;
+            }
+            QPushButton:hover {
+              background-color: #2980b9;
+            }
+          </string>
+        </property>
+        <property name="text">
+         <string>个人信息管理</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="viewSystemAdviceButton">
+        <property name="toolTip">
+         <string>点击查看系统为您推送的建议</string>
+        </property>
+        <property name="styleSheet">
+         <string>
+            QPushButton {
+              background-color: #f39c12;
+              color: white;
+              border-radius: 6px;
+              padding: 10px 24px;
+              font-size: 15px;
+              font-weight: bold;
+              border: none;
+              box-shadow: 0 2px 8px #f8c471;
+            }
+            QPushButton:hover {
+              background-color: #e67e22;
+            }
+            QPushButton:pressed {
+              background-color: #ca7c1b;
+            }
+          </string>
+        </property>
+        <property name="text">
+         <string>查看系统报告</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="suggestButton">
+        <property name="styleSheet">
+         <string>
+            QPushButton {
+              background-color: #27ae60;
+              color: white;
+              border-radius: 6px;
+              padding: 10px 20px;
+              font-size: 14px;
+              font-weight: bold;
+              border: none;
+            }
+            QPushButton:hover {
+              background-color: #219653;
+            }
+          </string>
+        </property>
+        <property name="text">
+         <string>给系统来点建议？</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QScrollArea" name="suggestionArea">
+      <property name="styleSheet">
+       <string>
+         QScrollArea {
+           border: none;
+           background: transparent;
+         }
+         QScrollBar:vertical {
+           border: none;
+           background: #f0f4f8;
+           width: 8px;
+           margin: 0;
+         }
+         QScrollBar::handle:vertical {
+           background: #cbd2d9;
+           border-radius: 4px;
+         }
+         QScrollBar::add-line:vertical, 
+         QScrollBar::sub-line:vertical {
+           height: 0;
+         }
+       </string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>788</width>
+         <height>478</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="suggestionsLayout">
+        <property name="spacing">
+         <number>15</number>
+        </property>
+        <property name="leftMargin">
+         <number>20</number>
+        </property>
+        <property name="topMargin">
+         <number>15</number>
+        </property>
+        <property name="rightMargin">
+         <number>20</number>
+        </property>
+        <property name="bottomMargin">
+         <number>15</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="emptyLabel">
+          <property name="styleSheet">
+           <string>
+             color: #95a5a6;
+             font-size: 14px;
+             padding: 30px;
+           </string>
+          </property>
+          <property name="text">
+           <string>暂无专家建议，系统将根据您的种植情况实时推送</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="refreshButton">
+      <property name="styleSheet">
+       <string>
+        QPushButton {
+          background-color: #3498db;  /* 蓝色背景 */
+          color: white;
+          border-radius: 6px;  /* 圆角 */
+          padding: 10px 20px;  /* 内边距 */
+          font-size: 14px;
+          font-weight: bold;
+          border: none;
+        }
+        QPushButton:hover {
+          background-color: #2980b9;  /* 悬浮时颜色变深 */
+        }
+        QPushButton:pressed {
+          background-color: #21618c;  /* 按下时背景颜色 */
+        }
+       </string>
+      </property>
+      <property name="text">
+       <string>刷新</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string>
+      background: #f0f4f8;
+      color: #7f8c8d;
+      padding: 0 10px;
+    </string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
